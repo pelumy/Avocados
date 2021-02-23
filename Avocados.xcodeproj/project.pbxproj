@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0452FE8425E4ED440015E9DD /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452FE8325E4ED440015E9DD /* HeaderView.swift */; };
+		0452FE8725E505250015E9DD /* HeaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452FE8625E505250015E9DD /* HeaderModel.swift */; };
+		0452FE8A25E505E00015E9DD /* HeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452FE8925E505E00015E9DD /* HeaderData.swift */; };
 		0480B5D125E3FEF500C2E900 /* AvocadosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B5D025E3FEF500C2E900 /* AvocadosApp.swift */; };
 		0480B5D325E3FEF500C2E900 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0480B5D225E3FEF500C2E900 /* ContentView.swift */; };
 		0480B5D525E3FEF600C2E900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0480B5D425E3FEF600C2E900 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0452FE8325E4ED440015E9DD /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		0452FE8625E505250015E9DD /* HeaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderModel.swift; sourceTree = "<group>"; };
+		0452FE8925E505E00015E9DD /* HeaderData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderData.swift; sourceTree = "<group>"; };
 		0480B5CD25E3FEF500C2E900 /* Avocados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avocados.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0480B5D025E3FEF500C2E900 /* AvocadosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvocadosApp.swift; sourceTree = "<group>"; };
 		0480B5D225E3FEF500C2E900 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 		0480B5E325E4081300C2E900 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				0452FE8925E505E00015E9DD /* HeaderData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -102,6 +109,7 @@
 		0480B5E725E4083A00C2E900 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0452FE8625E505250015E9DD /* HeaderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 		0480B5E825E4084100C2E900 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0452FE8325E4ED440015E9DD /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +197,9 @@
 				0480B5EE25E408A700C2E900 /* RipeningStagesView.swift in Sources */,
 				0480B5D125E3FEF500C2E900 /* AvocadosApp.swift in Sources */,
 				0480B5EA25E4089800C2E900 /* AvocadosView.swift in Sources */,
+				0452FE8725E505250015E9DD /* HeaderModel.swift in Sources */,
+				0452FE8A25E505E00015E9DD /* HeaderData.swift in Sources */,
+				0452FE8425E4ED440015E9DD /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
