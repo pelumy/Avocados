@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     let headers: [Header] = headersData
+    let facts: [Fact] = factsData
     
     // MARK: - BODY
     var body: some View {
@@ -25,20 +26,42 @@ struct ContentView: View {
                     }) //: HSTACK
                 }) //: SCROLL
                 
+                // MARK: - DISHES
+                Text("Avocado Dishes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                DishesView()
+                    .frame(maxWidth: 640)
+                    
+                // MARK: - FACTS
+                Text("Avocado Facts")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
+                ScrollView(.horizontal, showsIndicators: false, content: {
+                    HStack(alignment: .top, spacing: 60) {
+                        ForEach(facts) { fact in
+                            FactsView(fact: fact)
+                        } //: HSTACK
+                    } //: SCROLL
+                    .padding(.vertical)
+                    .padding(.leading, 60)
+                    .padding(.trailing, 20)
+                })
+                
+                
+                
                 // MARK: - FOOTER
                 
                 VStack(alignment: .center, spacing: 20, content: {
                     Text("All About Avocados")
-                        .font(.system(.title, design: .serif))
                         .fontWeight(.bold)
-                        .foregroundColor(Color("ColorGreenAdaptive"))
-                        .padding(8)
+                        .modifier(TitleModifier())
                     
                     Text("Everything you wanted to know about avocados but we are too afraid to ask")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundColor(.gray)
-                    
+                        .frame(minHeight: 60)
                     
                 }) //: VSTACK
                 .frame(maxWidth: 640)
@@ -47,6 +70,15 @@ struct ContentView: View {
             } //: VSTACK
         }) //: SCROLL
         .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct TitleModifier: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(.title, design: .serif))
+            .foregroundColor(Color("ColorGreenAdaptive"))
+                .padding(8)
     }
 }
 
