@@ -11,6 +11,7 @@ struct ContentView: View {
     // MARK: - PROPERTIES
     let headers: [Header] = headersData
     let facts: [Fact] = factsData
+    var recipes: [Recipe] = recipesData
     
     // MARK: - BODY
     var body: some View {
@@ -48,7 +49,18 @@ struct ContentView: View {
                     .padding(.trailing, 20)
                 })
                 
+                // MARK: - RECIPE CARDS
+                Text("Avocado Recipes")
+                    .fontWeight(.bold)
+                    .modifier(TitleModifier())
                 
+                VStack(alignment: .center, spacing: 20, content: {
+                    ForEach(recipes) { recipe in
+                        RecipeCardView(recipe: recipe)
+                    } //: LOOP
+                }) //: VSTACK
+                .frame(maxWidth: 640)
+                .padding(.horizontal )
                 
                 // MARK: - FOOTER
                 
