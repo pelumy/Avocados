@@ -10,6 +10,8 @@ import SwiftUI
 struct RecipeCardView: View {
     // MARK: - PROPERTIES
     var recipe: Recipe
+    var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
+    @State private var showModal = false
     
     // MARK: - BODY
     var body: some View {
@@ -61,6 +63,13 @@ struct RecipeCardView: View {
         .background(Color.white)
         .cornerRadius(12)
         .shadow(color: Color("ColorBlackTransparentlight"), radius: 8, x: 0, y: 0)
+        .onTapGesture {
+            hapticImpact.impactOccurred()
+            showModal = true
+        }
+        .sheet(isPresented: $showModal, content: {
+            RecipeDetailView(recipe: recipe)
+        })
     }
 }
 

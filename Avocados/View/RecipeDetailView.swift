@@ -11,6 +11,7 @@ struct RecipeDetailView: View {
     // MARK: - PROPERTIES
     var recipe: Recipe
     @State private var pulsate = false
+    @Environment(\.presentationMode) var presentationMode
     
     // MARK: - BODY
     var body: some View {
@@ -87,6 +88,7 @@ struct RecipeDetailView: View {
                 HStack {
                     Spacer()
                     Button(action: {
+                        presentationMode.wrappedValue.dismiss()
                         
                     }, label: {
                         Image(systemName: "chevron.down.circle.fill")
